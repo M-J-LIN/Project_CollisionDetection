@@ -1,0 +1,26 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{pgfgantt, rotating}
+\begin{document}
+%\begin{sideways}
+\newganttchartelement{voidbar}{
+    voidbar/.style={
+        draw=black,
+        top color=black!25,
+        bottom color=black!23
+    }}
+    \begin{ganttchart}[x unit=1.4cm, 
+        y unit title=1.0cm,
+        y unit chart=1.4cm, vgrid, title label font=\footnotesize,
+        canvas/.style={draw=black, dotted}]{1}{11}
+        \gantttitle{Month}{11}\\
+        \gantttitlelist{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}{1} \\
+
+        \ganttgroup[group label node/.append style={align=right}]{Survey for\ganttalignnewline collision detection\ganttalignnewline algo./impl.}{1}{3} \\
+        \ganttgroup[group label node/.append style={align=right}]{Set up client\ganttalignnewline and server}{1}{1} \\   
+        \ganttgroup[group label node/.append style={align=right}]{Collect sensor data\ganttalignnewline and communication\ganttalignnewline with server}{2}{5} \\ 
+        \ganttgroup[group label node/.append style={align=right}]{Collision detection \ganttalignnewline implementation} {4}{9} \\
+        \ganttgroup[group label node/.append style={align=right}]{Client application \ganttalignnewline implementation} {3}{8} \\
+        \ganttgroup{Evaluation} {8}{11} \\
+    \end{ganttchart}
+%\end{sideways}
+\end{document}
