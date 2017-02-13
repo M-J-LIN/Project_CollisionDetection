@@ -32,6 +32,7 @@
 \usepackage{color}
 \usepackage{caption}
 \usepackage{verbatim}
+\usepackage{hyperref}
 
 
 %----------------------------------------------------------------------------------------
@@ -57,8 +58,8 @@
 
 \title[Collision Detection in VR]
 {Collision Detection in VR} % The short title appears at the bottom of every slide, the full title is only on the title page
-\author[YiNing Chang \& MJ Lin]
-{   YiNing Chang \& MJ Lin
+\author[YiNing Chang \& MingJing Lin]
+{   YiNing Chang \& MingJing Lin
 } % Your name
 \institute[] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
@@ -66,7 +67,6 @@
 	Parallel and Distributed Processing Laboratory
 }
 \date{February 15, 2017} % Date, can be changed to a custom date
-
 
 \begin{document}
 
@@ -125,7 +125,7 @@
 		\medskip
 		\item     An user should receive feedbacks while the avatar touches the objects or other users.
             \begin{itemize}
-                \item   Be blocked, shaked or the vision feedback.
+                \item   Be blocked, vibration or the vision feedback.
             \end{itemize}
 	\end{itemize}
 	\end{frame}
@@ -182,7 +182,7 @@
 	\begin{itemize}
 		\item Send data to server: position, orientation and body information.
 			\begin{itemize}
-				\item Two or Three real users using keyboard and screen to demonstrate the performance.
+				\item Two or Three real users demonstrate the collision effect by keyboard and screen.
 				\item Lots of artificial users to test the scalibility.
 				\item Every user has artificial parts with random path, like arms or legs.
 			\end{itemize}
@@ -245,17 +245,10 @@
 		\end{itemize}
 	\item HMD Initialization and Sensor Enumeration Documentation
 		\begin{itemize}
-			\item from Oculus.com \\
-			https://developer3.oculus.com/documentation/pcsdk/latest/concepts/dg-sensor/
+			\item from \href{https://developer3.oculus.com/documentation/pcsdk/latest/concepts/dg-sensor/}{Oculus.com}
 		\end{itemize}
-	\item Algorithms in Game Engine Development
-		\begin{itemize}
-			\item http://www.haroldserrano.com/blog/algorithms-in-game-engine-development
-		\end{itemize}
-	\item Collision Detection from \it{jeffThompson} on GitHub
-		\begin{itemize}
-			\item https://github.com/jeffThompson/CollisionDetection
-		\end{itemize}
+	\item Algorithms in Game Engine \href{http://www.haroldserrano.com/blog/algorithms-in-game-engine-development}{Development}
+	\item Collision Detection from \it{jeffThompson} on \href{https://github.com/jeffThompson/CollisionDetection}{GitHub}
 \end{itemize}
 \end{frame}
 

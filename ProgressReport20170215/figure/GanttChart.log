@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.18)  11 FEB 2017 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.18)  13 FEB 2017 14:39
 entering extended mode
 **./GanttChart.tex
 (GanttChart.tex
@@ -504,19 +504,20 @@ G,.JBIG2,.JB2,.eps]
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (GanttChart.aux) ) 
 Here is how much of TeX's memory you used:
- 14043 strings out of 493334
- 298154 string characters out of 3139254
+ 14057 strings out of 493334
+ 298376 string characters out of 3139254
  341623 words of memory out of 3000000
- 17325 multiletter control sequences out of 15000+200000
+ 17339 multiletter control sequences out of 15000+200000
  4247 words of font info for 16 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,8n,66p,428b,820s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,8n,66p,428b,819s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on GanttChart.pdf (1 page, 27625 bytes).
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on GanttChart.pdf (1 page, 41959 bytes).
 PDF statistics:
- 17 PDF objects out of 1000 (max. 8388607)
+ 21 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
