@@ -66,7 +66,7 @@
 	NTUCSIE \\ % Your institution for the title page
 	Parallel and Distributed Processing Laboratory
 }
-\date{February 15, 2017} % Date, can be changed to a custom date
+\date{February 22, 2017} % Date, can be changed to a custom date
 
 \begin{document}
 
@@ -118,12 +118,12 @@
 	\begin{frame}
 	\frametitle{Motivation}
 	\begin{itemize}
-		\item     Collision detection is a critical technique of user experience in VR.
+		\item Collision detection is one of the critical technique in improving the user experience in VR.
             \begin{itemize}
-                \item   Collision between the users and the objects.
+                \item Collision between the users and the objects.
             \end{itemize}
 		\medskip
-		\item     An user should receive feedbacks while the avatar touches the objects or other users.
+		\item An user should receive feedbacks while the avatar touches the objects or other users.
             \begin{itemize}
                 \item   Be blocked, vibration or the vision feedback.
             \end{itemize}
@@ -144,7 +144,7 @@
 		\item VR Application
 			\begin{itemize}
 				\item An user interacts with objects using the controllers.
-				\item There is more complex in multiplayer VR application because of the user experience.
+				\item Real-time human-avatar interaction increases the complexity of multiplayer VR application.
 			\end{itemize}
 	\end{itemize}
 	\end{frame}
@@ -170,8 +170,8 @@
 	\begin{itemize}
 		\item Set up the server.
 		\item Receives sensor data from clients.
-		\item Performance of collision detection.
-		\item Monitors the usage of each resources.
+		\item Perform collision detection.
+		\item Monitors the usage of each resource.
 	\end{itemize}
 	\end{frame}
 
@@ -236,21 +236,55 @@
 %------------------------------------------------
 \section{Reference}
 
-\begin{frame}
-\frametitle{Reference}
-\begin{itemize}
-	\item Perfomance comparison between state-of-the-art point-cloud based collision detection approached on the CPU and GPU
-		\begin{itemize}
-			\item from IFAC-PapersOnline
-		\end{itemize}
-	\item HMD Initialization and Sensor Enumeration Documentation
-		\begin{itemize}
-			\item from \href{https://developer3.oculus.com/documentation/pcsdk/latest/concepts/dg-sensor/}{Oculus.com}
-		\end{itemize}
-	\item Algorithms in Game Engine \href{http://www.haroldserrano.com/blog/algorithms-in-game-engine-development}{Development}
-	\item Collision Detection from \it{jeffThompson} on \href{https://github.com/jeffThompson/CollisionDetection}{GitHub}
-\end{itemize}
-\end{frame}
+% Paper
+\subsection{Paper}
+	\begin{frame}
+	\frametitle{Paper}
+	\begin{itemize}
+		\item Perfomance comparison between state-of-the-art point-cloud based collision detection approached on the CPU and GPU
+			\begin{itemize}
+				\item from \it{IFAC-PapersOnline}
+			\end{itemize}
+		\item Collision detection between point clouds using an efficient k-d tree implementation
+			\begin{itemize}
+				\item from \it{Advanced Engineering Informatics}
+			\end{itemize}
+		\item Real-time KD-Tree construction on graphics hardware
+			\begin{itemize}
+				\item from \it{ACM Advanced Materials Research}
+			\end{itemize}
+		\item Self-Customized BSP Trees for Collision Detection
+			\begin{itemize}
+				\item from \it{Computational Geometry}
+			\end{itemize}
+		\item Unified GPU Voxel Collision Detection for Mobile Manipulation Planning
+			\begin{itemize}
+				\item from \it{Intelligent Robots and Systems}
+			\end{itemize}
+	\end{itemize}
+	\end{frame}
 
+% Algorithm
+\subsection{Algorithm}
+	\begin{frame}
+	\frametitle{Algorithm}
+	\begin{itemize}
+		\item Algorithms in Game Engine \href{http://www.haroldserrano.com/blog/algorithms-in-game-engine-development}{Development}
+	\end{itemize}
+	\end{frame}
+
+% Code
+\subsection{Code}
+	\begin{frame}
+	\frametitle{Code}
+	\begin{itemize}
+		\item HMD Initialization and Sensor Enumeration Documentation
+			\begin{itemize}
+				\item from \href{https://developer3.oculus.com/documentation/pcsdk/latest/concepts/dg-sensor/}{Oculus.com}
+			\end{itemize}
+		\item Collision Detection from \it{jeffThompson} on \href{https://github.com/jeffThompson/CollisionDetection}{GitHub}
+		\item JS game development - 3D AABB collisions on \href{https://github.com/mozdevs/gamedev-js-3d-aabb}{GitHub}
+	\end{itemize}
+	\end{frame}
 
 \end{document} 

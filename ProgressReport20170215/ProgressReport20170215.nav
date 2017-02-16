@@ -41,10 +41,17 @@
 \headcommand {\beamer@subsectionpages {12}{12}}
 \headcommand {\slideentry {3}{0}{1}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {3}{0}{2}{14/14}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{14}{Paper}}\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\slideentry {3}{1}{1}{14/14}{Paper}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@partpages {1}{14}}
-\headcommand {\beamer@subsectionpages {13}{14}}
-\headcommand {\beamer@sectionpages {13}{14}}
-\headcommand {\beamer@documentpages {14}}
-\headcommand {\def \inserttotalframenumber {10}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{15}{Algorithm}}\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\slideentry {3}{2}{1}{15/15}{Algorithm}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{16}{Code}}\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\slideentry {3}{3}{1}{16/16}{Code}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@partpages {1}{16}}
+\headcommand {\beamer@subsectionpages {16}{16}}
+\headcommand {\beamer@sectionpages {13}{16}}
+\headcommand {\beamer@documentpages {16}}
+\headcommand {\def \inserttotalframenumber {12}}
