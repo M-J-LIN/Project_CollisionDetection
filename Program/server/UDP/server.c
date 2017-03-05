@@ -32,7 +32,7 @@ void *SendMsg(void *port){
 
 	char databuf[MAXD];
 	while (1){
-		sleep(1);
+		usleep(100000);
 		memcpy(databuf, Table, sizeof(char)*N*N);
 		for (int i=0; i<nClient; i++){
 			memset((char *)&client_addr, 0, sizeof(client_addr));
@@ -116,7 +116,7 @@ int main(int argc, char *argv[]){
 		puts("Receving thread creation failed.");
 
 	while(1){
-		for(int i=0; i<MAXU; i++){
+		for(int i=0; i<nClient; i++){
 			if(Msg[i][0] != '\0'){
 				int tmp_pos = atoi(Msg[i]);
 				if(tmp_pos > 0 && tmp_pos < N-1){

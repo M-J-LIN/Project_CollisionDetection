@@ -16,23 +16,33 @@ typedef struct {
 	int Port;
 } Server_arg;
 
+int run = 1;
 int pos = N/2;
+char TableBuf[N*N];
+char Table[N*(N+1)];
 
-void Render(char data[]){
-	for(int x=0; x<N; x++){
-		printf("%02d:", x);
-		for(int y=0; y<N; y++){
-			char tmp;
-			if(x==0 || x==N-1 || y==0 || y==N-1)
-				tmp = '=';
-			else if (data[x*N+y]==0)
-				tmp = ' ';
-			else
-				tmp = '*';
-			putchar(tmp);
+void *Render(){
+#define Vert(x, y) ((x)*(N+1)+(y))
+	while(run){
+		usleep(100000);
+		for(int x=0; x<N; x++){
+			for(int y=0; y<N; y++){
+				char tmp;
+				if(x==0 || x==N-1 || y==0 || y==N-1)
+					tmp = '=';
+				else if (TableBuf[x*N+y]==0)
+					tmp = ' ';
+				else
+					tmp = '*';
+				Table[Vert(x, y)] = tmp;
+			}
+			Table[Vert(x, N)] = '\n';
 		}
-		printf("\n");
+		Table[Vert(N-1, N)] = '\0';
+		puts(Table);
 	}
+	pthread_exit(NULL);
+#undef Vert
 }
 
 void *SendMsg(void *connect_arg){
@@ -52,8 +62,8 @@ void *SendMsg(void *connect_arg){
 
 	puts("Client connects to the server.");
 	char databuf[MAXD];
-	while (1){
-		usleep(100);
+	while (run){
+		usleep(100000);
 		sprintf(databuf, "%d", pos);
 		if (sendto(sock_out, databuf, sizeof(databuf), 0,
 					(struct sockaddr*)&server_addr, sizeof(server_addr)) < 0){
@@ -87,14 +97,14 @@ void *RecvMsg(void *connect_arg){
 	printf("Client starts listening on the port %d.\n", server_arg->Port);
 	int len = sizeof(client_addr);
 	char databuf[MAXD];
-	while (1){
+	while (run){
 		if (recvfrom(sock_in, databuf, sizeof(databuf), 0,
 				(struct sockaddr *)&client_addr, (socklen_t *)&len) < 0){
 			perror("Receive Msg error");
 			continue;
 		}
 		else
-			Render(databuf);
+			memcpy(TableBuf, databuf, N*N);
 	}
 	pthread_exit(NULL);
 }
@@ -109,11 +119,13 @@ int main (int argc, char *argv[]){
 	server_arg.Server_addr = argv[1];
 	server_arg.Port = atoi(argv[2]);
 
-	pthread_t sendThread, recvThread;
+	pthread_t sendThread, recvThread, renderThread;
 	if (pthread_create(&sendThread, NULL, SendMsg, (void *)&server_arg) < 0)
 		puts("Sending thread creation failed.");
 	if (pthread_create(&recvThread, NULL, RecvMsg, (void *)&server_arg) < 0)
 		puts("Receving thread creation failed.");
+	if (pthread_create(&renderThread, NULL, Render, (void *)NULL) < 0)
+		puts("Render thread creation failed.");
 
 	int instruction;
 	while(scanf("%d", &instruction) == 1){
@@ -121,9 +133,14 @@ int main (int argc, char *argv[]){
 			pos --;
 		else if(instruction == 2)
 			pos ++;
+		else{
+			run = 0;
+			break;
+		}
 	}
 
 	pthread_join(sendThread, NULL);
 	pthread_join(recvThread, NULL);
+	pthread_join(renderThread, NULL);
 	return 0;
 }
